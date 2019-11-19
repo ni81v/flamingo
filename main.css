@@ -1,0 +1,18 @@
+html {
+  font-size: 4px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(4px + 10 * ((100vw - 320px) / 2680));
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map */

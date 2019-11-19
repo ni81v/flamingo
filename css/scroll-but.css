@@ -1,0 +1,75 @@
+@media (min-width: 600px) and (min-height: 360px) {
+  /* begin Scroll Down Button */
+  button.scroll_down {
+    display: grid;
+    grid-area: 2 / 3 / 3 / 4;
+    position: relative;
+    margin-left: auto;
+    margin-right: 5%;
+    margin-bottom: 0;
+    margin-top: auto;
+    left: 0;
+    right: 0;
+    /* top: 85%; */
+    top: 0;
+    height: 50px;
+    width: 30px;
+    bottom: 60px;
+    background-color:  rgba(255, 253, 253, 0.7);
+    border: 3px solid #335e06;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  button.scroll_down:before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 8px;
+    height: 8px;
+    margin-left: -3px;
+    background-color: #335e06;
+    border-radius: 100%;
+    -webkit-animation: scroll_down_btn-animation 2s infinite;
+    animation: scroll_down_btn-animation 2s infinite;
+    box-sizing: border-box;
+  }
+}  
+@keyframes scroll_down_btn-animation {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+  
+@-webkit-keyframes scroll_down_btn-animation {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+  
+  /* end Scroll Down Button */

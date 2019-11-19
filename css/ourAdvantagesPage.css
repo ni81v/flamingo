@@ -1,0 +1,244 @@
+#ourAdvantagesPage {
+    grid-area: ourAdvantagesPage;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 5vw 1fr 2fr 1fr 2fr 5vw;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 2vw 0;
+    min-width: 240px;
+    max-width: 3000px;
+}
+.our-advs-sign {
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    font-weight: bold;
+    padding: 6vw 0;
+}
+.first-row {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-rows: repeat(4, auto);
+}
+.second-row {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-rows: repeat(4, auto);
+}
+.third-row {
+    display: grid;
+   grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-rows: repeat(4, auto);
+}
+.prk-icn,
+.qt-slp-icn,
+.wi-fi-icn,
+.lowcost-icn,
+.fm-rm-icn,
+.pets-icn {
+   justify-self: center;
+   align-self: center;
+}
+.prk-icn img,
+.qt-slp-icn img,
+.wi-fi-icn img,
+.lowcost-icn img,
+.fm-rm-icn img,
+.pets-icn img {
+   display: flex;
+   padding: 1vw;
+   width: 100%;
+   height: auto;
+}
+.prk-inf,
+.qt-slp-inf,
+.wi-fi-inf,
+.lowcost-inf,
+.fm-rm-inf,
+.pets-inf {
+    display: grid;
+    grid-template-rows: fit-content(30%) 70%;
+    align-items: flex-start;
+}
+.prk-sgn,
+.qt-slp-sgn,
+.wi-fi-sgn,
+.lowcost-sgn,
+.fm-rm-sgn,
+.pets-sgn {
+    font-size: calc(7px + 6 * ((100vw - 320px) / 680));
+    font-weight: bold;
+    grid-area: 1 / 1 / 2 / 2;
+}
+.prk-txt,
+.qt-slp-txt,
+.wi-fi-txt,
+.lowcost-txt,
+.fm-rm-txt,
+.pets-txt {
+    font-size: calc(4px + 6 * ((100vw - 320px) / 680));
+}
+@media (min-width: 320px) {
+    .prk-txt,
+    .qt-slp-txt,
+    .wi-fi-txt,
+    .lowcost-txt,
+    .fm-rm-txt,
+    .pets-txt {
+        font-size: calc(6px + 6 * ((100vw - 320px) / 680));
+    }
+}
+@media (min-width: 360px) {
+    #ourAdvantagesPage {
+        grid-template-columns: 10vw 1fr 2fr 1fr 2fr 10vw;
+    }
+}
+@media (min-width: 533px) {
+    .prk-txt,
+    .qt-slp-txt,
+    .wi-fi-txt,
+    .lowcost-txt,
+    .fm-rm-txt,
+    .pets-txt {
+        font-size: calc(8px + 6 * ((100vw - 320px) / 680));
+    }
+}
+@media (min-width: 600px) {
+    #ourAdvantagesPage {
+        grid-template-columns: 20% 1fr 2fr 1fr 2fr 20%;
+    }
+}
+@media(min-width: 600px) and (min-height: 360px) {
+    .our-advs-sign {
+        padding: 3vw 0;
+    }
+    .prk-icn img,
+    .qt-slp-icn img,
+    .wi-fi-icn img,
+    .lowcost-icn img,
+    .fm-rm-icn img,
+    .pets-icn img   {
+        max-height: 58px;
+        min-height: 58px;
+        max-width: 58px;
+        min-width: 58px;
+    }
+}
+/*              600 x 360               */
+@media (min-width: 600px) and (min-height: 360px) {
+    .prk-txt,
+    .qt-slp-txt,
+    .wi-fi-txt,
+    .lowcost-txt,
+    .fm-rm-txt,
+    .pets-txt {
+        font-size: calc(4px + 6 * ((100vw - 320px) / 680));
+    }
+}
+@media (min-width: 720px) {
+    .our-advs-sign {
+        padding: 4rem 0;
+        padding-bottom: 1.5rem;
+    }
+}
+@media (min-width: 800px) {
+    #ourAdvantagesPage {
+        grid-gap: 1.5rem 0;
+    }
+    .our-advs-sign {
+        padding: 2.5rem 0;
+    }
+    .prk-sgn,
+    .qt-slp-sgn,
+    .wi-fi-sgn,
+    .lowcost-sgn,
+    .fm-rm-sgn,
+    .pets-sgn {
+        padding-bottom: 1.5rem;
+    }
+    .prk-icn img,
+    .qt-slp-icn img,
+    .wi-fi-icn img,
+    .lowcost-icn img,
+    .fm-rm-icn img,
+    .pets-icn img   {
+        max-height: 75px;
+        min-height: 75px;
+        max-width: 75px;
+        min-width: 75px;
+    }
+}
+@media (min-width: 1024px) {
+    .our-advs-sign {
+        padding: 4rem;
+        padding-bottom: 1.5rem;
+        margin: 0;
+    }
+}
+@media (min-width: 1200px) and (min-height: 800px) {
+    .prk-txt,
+    .qt-slp-txt,
+    .wi-fi-txt,
+    .lowcost-txt,
+    .fm-rm-txt,
+    .pets-txt {
+        font-size: calc(5.5px + 6 * ((100vw - 320px) / 680));
+    }
+}
+@media (min-width: 1360px) {
+    .prk-icn img,
+    .qt-slp-icn img,
+    .wi-fi-icn img,
+    .lowcost-icn img,
+    .fm-rm-icn img,
+    .pets-icn img   {
+        max-height: 85px;
+        min-height: 85px;
+        max-width: 85px;
+        min-width: 85px;
+        padding: 0;
+    }
+}
+@media (min-width: 1600px) {
+    .our-advs-sign {
+        padding: 7rem;
+        padding-bottom: 1.5rem;
+        margin: 0;
+    }
+}
+@media (min-width: 3000px) and (min-height: 2000px) {
+    .prk-sgn,
+    .qt-slp-sgn,
+    .wi-fi-sgn,
+    .lowcost-sgn,
+    .fm-rm-sgn,
+    .pets-sgn {
+        font-size: 30px;
+    }
+    .prk-txt,
+    .qt-slp-txt,
+    .wi-fi-txt,
+    .lowcost-txt,
+    .fm-rm-txt,
+    .pets-txt {
+        font-size: 32.65px;
+    }
+    .our-advs-sign {
+        font-size: 33.4px;
+    }
+}

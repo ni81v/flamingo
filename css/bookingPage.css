@@ -1,0 +1,389 @@
+#bookingPage {
+    grid-area: bookingPage;
+    padding: 2rem 0;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: auto;
+    grid-template-areas:    ". bookingBox ."; 
+    height: fit-content;
+    min-width: 240px;
+    max-width: 3000px;
+}
+.bookingBox {
+    grid-area: bookingBox;
+    display: grid;
+    margin-bottom: 2rem;
+    min-width: 240px;
+    box-shadow: 0 0 10px 2px #c9c7c7;
+    padding: 2rem;
+}
+.book-sign {
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    font-weight: bold;
+    text-align: center;
+}
+.book-notice {
+    grid-area: 2 / 1 / 3 / 2;
+    font-size: calc(8px + 6 * ((100vw - 320px) / 680));
+    padding: 1rem 0;
+    margin: 0;
+}
+.bookingForm {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 0 20px;
+}
+input#your-name {
+    grid-area: 1 / 1 / 2 / 3;
+}
+input#email {
+    grid-area: 2 / 1 / 3 / 3;
+}
+input#phone {
+    grid-area: 3 / 1 / 4 / 3;
+}
+div#arrival.sd-container {
+    grid-area: 4 / 1 / 5 / 2;
+}
+div#checkOut.sd-container {
+    grid-area: 4 / 2 / 5 / 3;
+}
+div#ad-kd {
+    grid-area: 5 / 1 / 6 / 3;
+    color: grey;
+}
+.bookingForm label,
+.bookingForm input {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    font-size: calc(8px + 6 * ((100vw - 320px) / 680));
+}
+.sd-container {
+    position: relative;
+    float: left;
+    width: 80%;
+}
+.sd {
+    padding: 5px 10px;
+    height: 30px;
+    width: 150px;
+}
+.open-button {
+    background: #fff;
+    pointer-events: none;
+    position: absolute;
+    top: 7px;
+    right: -16px;
+    width: 25px;
+    height: 20px;
+}
+div#arrival.sd-container button,
+div#checkOut.sd-container button {
+    background: #fff;
+    pointer-events: none;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+div#arrival.sd-container button img,
+div#checkOut.sd-container button img {
+    height: 10px;
+    width: 10px;
+}
+#arrival.sd-container {
+    justify-self: start;
+}
+#checkOut.sd-container {
+    justify-self: start;
+}
+
+#arrival.sd-container input,
+#checkOut.sd-container input {
+    border: none;
+    border-bottom: 1px solid grey; 
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 100%;
+}
+.book-btn {
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    font-weight: bold;
+    padding: .2rem 1.5rem;
+    color: white;
+    background: #8bc74a;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+}
+.book-btn:hover {
+    background: #ffffff;
+    border: 2px solid #335e06;
+    color: #335e06;
+    font-weight: bold;
+}
+.book-btn:active {
+    background: #ffffff;
+    border: 2px solid #335e06;
+    color: #335e06;
+    font-weight: bold;
+}
+.book-btn:focus {
+    outline: none;
+}
+.bookingForm input[id*="your-name"],
+.bookingForm input[id*="email"],
+.bookingForm input[id*="phone"],
+.bookingForm input[id*="arrival"],
+.bookingForm input[id*="checkOut"] {
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #5e5c5c;
+    font-weight: bold;
+    width: 90%;
+    vertical-align: bottom;
+}
+.bookingForm input[id*="adults"],
+.bookingForm input[id*="kids"],
+.bookingForm label {
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #5e5c5c;
+    font-weight: bold;
+    width: auto;
+}
+.bookingForm input[type="checkbox"] {
+    border: 1px solid #ccc;
+    background: white;
+    width: 1rem;
+    height: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.bookingForm input[type="checkbox"]:checked {
+    background: #c3d8c3;
+    border-color: #225a22;
+    background-image: url("../img/bookingPage/plus.png");
+    background-size: contain;
+} 
+div#ad-kd label {
+    margin-right: 2rem;
+}
+input#adults,
+input#kids {
+    margin-left: .5rem;
+}
+.bookingForm button[type="submit"] {
+    display: block;
+    grid-area: 6 / 1 / 7 / 3;
+    justify-self: center;
+    width: 60%;
+    margin-top: 1rem;
+}
+@media (min-width: 320px) {
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 15px;
+        width: 15px;
+    }
+}
+@media(min-width: 320px) and (min-height: 480px){
+    .bookingForm label,
+    .bookingForm input,
+    .book-notice {
+        font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    }
+    .open-button {
+        top: 4px;
+        right: -15px;
+        width: 35px;
+        height: 25px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 20px;
+        width: 20px;
+    }
+}
+@media (min-width: 360px) {
+    #bookingPage {
+        grid-template-columns: 10vw 80vw 10vw;
+    }
+    .bookingBox {
+        margin: auto;
+    }
+}
+@media (min-width: 390px) {
+    .open-button {
+        right: -13px;
+    }
+}
+@media (min-width: 420px) {
+    .open-button {
+        top: 6px;
+        right: -10px;
+    }
+}
+@media (min-width: 600px) and (min-height: 360px) {
+    #bookingPage {
+        grid-template-columns: 20% 60% 20%;
+    }
+    .bookingForm label,
+    .bookingForm input {
+        font-size: calc(4px + 6 * ((100vw - 320px) / 680));
+        padding: .2vw 0;
+    }
+    .book-notice {
+        font-size: calc(4px + 6 * ((100vw - 320px) / 680));
+        padding: 1rem 2rem;
+    }
+    .open-button {
+        width: 30px;
+        height: 27px;
+        top: 1px;
+        right: -9px;
+        width: 30px;
+    }
+}
+@media (min-width: 800px) and (min-height: 240px) {
+    .open-button {
+        height: 30px;
+        top: 2px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 20px;
+        width: 20px;
+    }
+}
+@media (min-width: 960px) and (min-height: 240px) {
+    .open-button {
+        top: 4px;
+        right: -6px;
+        width: 35px;
+        height: 30px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 25px;
+        width: 25px;
+    }
+}
+@media (min-width: 1024px) and (min-height: 240px) {
+    .open-button {
+        right: 1px;
+        top: 5px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 25px;
+        width: 25px;
+    }
+}
+@media (min-width: 1195px) and (min-height: 240px) {
+    .open-button {
+        top: 4px;
+        right: -6px;
+        width: 40px;
+        height: 32px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 30px;
+        width: 30px;
+    }
+}
+@media (min-width: 1200px) and (min-height: 240px) {
+    .bookingForm label,
+    .bookingForm input:not([type="checkbox"]),
+    .book-notice {
+        font-size: calc(5.5px + 6 * ((100vw - 320px) / 680));
+        margin-top: 2rem;
+    }
+    div#arrival.sd-container,
+    div#checkOut.sd-container {
+        margin-top: 1.2rem;        
+    }
+    .bookingForm button[type="submit"] {
+        padding: .8rem .8rem;
+        margin-top: 2rem;
+        border-radius: 12px;
+        font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    }
+}
+@media (min-width: 1400px) and (min-height: 240px) {
+    .open-button {
+        right: -9px;
+        top: 7px;
+        width: 45px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 30px;
+        width: 30px;
+    }
+}
+@media (min-width: 1600px) and (min-height: 240px) {
+    .open-button {
+        right: -5px;
+        top: 9px;
+        width: 45px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 30px;
+        width: 30px;
+    }
+}
+@media (min-width: 1700px) and (min-height: 240px) {
+    .open-button {
+        right: 2px;
+        top: 1px;
+        width: 45px;
+        height: 45px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 40px;
+        width: 40px;
+    }
+}
+@media (min-width: 2000px) and (min-height: 240px) {
+    div.bookingBox {
+        max-width: 751.16px;
+    }
+    .open-button {
+        right: 5px;
+        top: -1px;
+        width: 50px;
+        height: 50px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 50px;
+        width: 50px;
+    }
+}
+@media (min-width: 2500px) and (min-height: 240px) {
+    .open-button {
+        width: 60px;
+        top: 7px;
+ 
+    }
+}
+@media (min-width: 3000px) and (min-height: 240px) {
+    .open-button {
+        right: 2px;
+        top: 7px;
+        width: 60px;
+        height: 50px;
+    }
+    div#arrival.sd-container button img,
+    div#checkOut.sd-container button img {
+        height: 55px;
+        width: 55px;
+    }
+}

@@ -1,0 +1,39 @@
+
+#welcomePage {
+    grid-area: welcomePage;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: auto auto;
+    grid-template-areas:   ". welcome-text ."
+                        ". welcome-slider ." ; 
+    height: fit-content;
+    min-width: 240px;
+    max-width: 3000px;
+}
+@media (min-width: 360px) {
+   #welcomePage {
+        grid-template-columns: 10vw 80vw 10vw;
+    }
+}
+@media (min-width: 600px) {
+    #welcomePage {
+        grid-template-columns: 20% 60% 20%;
+    }
+}
+@media (min-width: 600px) and (max-height: 359px) {
+    #welcomePage {
+        grid-template-columns: 10vw 80vw 10vw;
+    }
+}
+@media (min-width: 720px) {
+    #welcomePage {
+        grid-template-columns: 20% 60% 20%;
+    }
+}
+@media (min-width: 3000px) and (min-height: 2000px) {
+    #welcomePage   {
+      min-height: 2000px;
+      max-height: 2000px;
+    }
+}
